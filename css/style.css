@@ -5,57 +5,54 @@
     box-sizing: border-box;
 }
 
-
-
-
-/* MAIN */
-
 body {
     background-color: black;
 }
 
-main {
-    width: 100%;
-    height: 90vh;
-    /* background-color: black; */
-    position: relative;
+/* HEADER */
+header {
+    height: 70px;
+    background-color: black;
+    padding: 5px;
+    text-align: right;
 }
 
-.top-commands {
-    position: absolute;
-    top: 10px;
-    right: 5px;
+.header-button {
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #666;
     color: white;
+    cursor: pointer;
 }
 
-.top-commands > span {
-    background-color: grey;
-    border-radius: 5px;
-    padding: 6px;
-    margin-left: 5px;
+
+/* MAIN */
+main {
+    height: calc(100vh - 150px);
+    background-color: black;
+    overflow: auto;
 }
 
-.container {
-    width: 95%;
-    height: 100vh;
-    margin: 0 auto;
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
-    padding-top: 50px;
 }
 
 .card {
-    background-image: url(https://picsum.photos/seed/picsum/250/150);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 150px;
-    width: 250px;
-    margin-bottom: 15px;
-    margin-right: 2px;
+    height: 250px;
+    width: 350px;
     position: relative;
+    margin: 5px;
+}
+
+.card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .user {
@@ -63,52 +60,49 @@ main {
     bottom: 0;
     left: 0;
     color: white;
-    background-color: rgba(39, 38, 38, 0.7);
-    padding: 5px 3px;
-
+    background-color: rgba(39, 38, 38, 0.5);
+    padding: 5px;
 }
 
+/* FOOTER */
 footer {
-    background-color: #413f3f;
+    background-color: #333;
     height: 80px;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-nav {
     display: flex;
-    height: 100%;
-    align-items: center;
     justify-content: space-between;
-}
-
-/* .audio-video {
-    padding-left: 25px;
-
-} */
-
-.command {
-   padding-top: 15px;
-}
-
-
-.end {
-    color: red;
-    background-color: #4a4a4a;
-    height: 100%;
-    padding: 0 25px;
-    line-height: 80px;
-    cursor: pointer;
-}
-
-.wrapper {
-    display: inline-block;
-    padding-right: 25px;
-    line-height: 15px;
-    vertical-align: middle;
-    text-align: center;
     color: white;
+}
+
+.wrapper-sx, .wrapper-center, .wrapper-dx {
+    display: flex;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    height: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+}
+
+.green {
+    color: green;
+}
+
+.icon i {
+   margin-bottom: 20px;
+}
+
+
+
+.icon.special {
+    color: red;
+    background-color: #666;
+    padding: 25px;
+    cursor: pointer;
 }
